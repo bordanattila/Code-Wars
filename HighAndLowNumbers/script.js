@@ -39,6 +39,11 @@ function highAndLow(numbers){
 
 // elegant solution
 function highAndLow(numbers){
-    numbers = numbers.split(' ');
-    return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+  const num = numbers.split(" ").map(Number)
+
+  const max = Math.max.apply(null, num);
+ 
+  const min = Math.min.apply(null, num);
+ 
+  console.log(max+" "+min)
   }
